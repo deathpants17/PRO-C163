@@ -17,7 +17,6 @@
   <body>
     <a-scene id="scene" physics="debug:false" inspector-plugin-recast>
 
-      <!--Assets-->
       <a-assets>
         <a-asset-item id="shooter" src="./models/soldier/scene.gltf"></a-asset-item>
         <a-asset-item id="wall_texture" src="./images/wall1.jpg"></a-asset-item>
@@ -52,25 +51,22 @@
       <!--Bullets-->
       <a-entity bullets="position:0 0 -5"></a-entity>
 
-      <!-- Navigation Mesh -->
-      <a-entity id="navigation-mesh" position="0 -1 0" gltf-model="#collider" visible="false" nav-mesh>
-      </a-entity>
       
-      <!--Ground-->
+
       <a-plane id="ground" repeat="200 200" position="0 0 0" rotation="-90 0 0" height="200" width="200" static-body
         visible="false">
       </a-plane>
 
-      <!--Left wall-->
+
       <a-box id="right-wall" material="color: #34548d" color="red" repeat="10 1 1" position="25 5 -15" rotation="0 -90 0"
         height="10" width="50" depth="1" static-body visible="true">
       </a-box>
-      <!--Right wall-->
+
       <a-box id="left-wall" material="color: #34548d" color="red" repeat="10 1 1" position="-25 5 -15" rotation="0 90 0"
         height="10" width="50" depth="1" static-body visible="true">
       </a-box>
 
-      <!--Back wall-->
+
       <a-box id="back-wall" material="color: #34548d" color="red" repeat="10 1 1" position="0 5 -40" rotation="0 0 0"
         height="10" width="50" depth="1" static-body visible="true">
       </a-box>
